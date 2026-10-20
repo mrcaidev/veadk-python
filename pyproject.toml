@@ -25,7 +25,7 @@ dependencies = [
     # (LiteLlm models, sessions). google-adk ships them in base on 1.x but moved
     # them behind extras ([extensions]/[db]) on 2.x, so declare them directly to
     # stay compatible across google-adk >= 2.7.0,<2.8.0.
-    "litellm>=1.83.7,<=1.83.14", # google-adk LiteLlm model ([extensions] on 2.x)
+    "litellm>=1.83.7,<=1.106.0", # google-adk LiteLlm model ([extensions] on 2.x)
     # The `asyncio` extra is what pulls greenlet, which SQLAlchemy's async
     # engine requires and which ADK's DatabaseSessionService therefore needs.
     # Plain `sqlalchemy` leaves it to a platform marker that does not cover
@@ -41,7 +41,7 @@ dependencies = [
     "agent-pilot-sdk==0.1.2", # Prompt optimization by Volcengine AgentPilot/PromptPilot toolkits
     "fastmcp>=2.12.3,<4", # For running MCP; 4.x requires mcp >=2
     "trustedmcp==0.0.5", # For running TrustedMCP
-    "mcp==1.26.0", # Bumped to satisfy google-adk requirement
+    "mcp==1.30.0", # Bumped to satisfy google-adk requirement
     "cookiecutter==2.6.0", # For cloud deploy
     "omegaconf==2.3.0", # For agent builder
     "psycopg2-binary>=2.9.10", # For PostgreSQL database (short term memory)
@@ -114,7 +114,7 @@ database = [
     "redis>=5.0",                   # For Redis database
     "pymysql>=1.1.1",               # For MySQL database
     "volcengine>=1.0.193",          # For Viking DB
-    "mem0ai>=1.0.0,<2",             # For mem0; >=1.0 lifts the openai<1.110 cap (coexist with litellm openai 2.x), <2 keeps the kwargs add()/search() API veadk uses (2.x switched to an options object)
+    "mem0ai>=1.0.0,<3",             # For mem0; >=1.0 lifts the openai<1.110 cap (coexist with litellm openai 2.x), <2 keeps the kwargs add()/search() API veadk uses (2.x switched to an options object)
 ]
 speech = []
 a2ui = [
