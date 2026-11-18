@@ -41,7 +41,7 @@ dependencies = [
     "agent-pilot-sdk==0.1.2", # Prompt optimization by Volcengine AgentPilot/PromptPilot toolkits
     "fastmcp>=2.12.3,<4", # For running MCP; 4.x requires mcp >=2
     "trustedmcp==0.0.5", # For running TrustedMCP
-    "mcp==1.26.0", # Bumped to satisfy google-adk requirement
+    "mcp==1.30.0", # Bumped to satisfy google-adk requirement
     "cookiecutter==2.6.0", # For cloud deploy
     "omegaconf==2.3.0", # For agent builder
     "psycopg2-binary>=2.9.10", # For PostgreSQL database (short term memory)
